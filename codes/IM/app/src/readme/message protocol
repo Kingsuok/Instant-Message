@@ -1,0 +1,147 @@
+message protocol:
+
+
+register (client --> server)
+type: register
+name:
+password:
+
+register (server --> client)
+type: register
+status: success
+
+register (server --> client)
+type: register
+status: failure
+
+
+
+login (client --> server)
+type: login
+name:
+password:
+
+login (server --> client)
+type: login
+status: success
+
+login (server --> client)
+type: login
+status: failure
+reason:
+
+
+Join group  (client --> server )
+type: joinGroup
+name:
+group:
+
+Join group  (server --> client)
+type: joinGroup
+name:
+time:
+group:::::
+content: "name join the group"
+(groupCreator: 加入sqlite本地存储所有的消息)
+(groupCreatedTime: 加入sqlite本地存储所有的消息)
+
+Leave group  (client --> server )
+type: leaveGroup
+name:
+group:
+
+Leave group  (server --> client)
+type: leaveGroup
+name:
+time:
+group:::::
+content: "name leave the group"
+
+
+groupChat (client --> server )
+type: groupChat
+
+content:
+
+groupChat (server --> client)
+type: groupChat
+time:
+name:
+group:::::
+content:
+
+groupList(client -- > server)
+type: groupList
+
+groupList(server --> client)
+type: groupList
+groupList: json string of ArrayList<String>
+
+buddyList(client --> server)
+type:buddyList
+
+buddyList(server --> client)
+type: groupList
+buddyList: json string of ArrayList<String>
+
+createGroup (client --> server)
+type: createGroup
+groupName:
+creator:
+
+createGroup (server --> client)// send to all clients.
+type: createGroup
+newGroup:
+creator:
+status: success
+
+createGroup (server --> client)// send to creator
+type: createGroup
+status: failure
+reason:
+
+deleteGroup (client --> server)
+type: deleteGroup
+groupName:
+creator:
+
+
+deleteGroup (server --> client)//send to all clients of the group
+type: deleteGroup
+status:success
+group:
+time:
+name:
+content:
+
+
+deleteGroup (server --> client) // send to creator
+type: deleteGroup
+status:failure
+reason:
+
+logout (client --> server)
+type: logout
+name:
+
+NetProblem back (client -->server) link successfully again
+type:netProblem
+name:
+group:
+stillJoinedGroup:
+time:
+
+NetProblem  (server-->client) server check that
+type: netProblem back
+time:
+name:
+group:::::
+content:
+
+
+NetProblem  (server-->client) server check that
+type: netProblem leave
+time:
+name:
+group:::::
+content:

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/border"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1.2"
+        android:id="@+id/menu">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/chatManager"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            android:text="chat"
+            android:textAllCaps="false"
+            android:background="#00000000"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/groupManager"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            android:text="group"
+            android:textAllCaps="false"
+            android:background="#00000000"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical|right"
+            android:textStyle="bold"
+            android:text="IM System Status: "
+            android:textSize="20sp"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/status"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:textColor="#ff0033"
+            android:text="Up"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:id="@+id/fragments"></LinearLayout>
+
+
+</LinearLayout>

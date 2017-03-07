@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
+    android:layout_alignParentBottom="true"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/connectionStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical|right"
+            android:textStyle="bold"
+            android:text="Group ID: "
+            android:textSize="20sp"
+            android:id="@+id/textView" />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/groupName"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:textColor="#cc0033"
+            android:text="Not Connected"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textStyle="italic"
+        android:layout_below="@id/connectionStatus"
+        android:text="Join"
+        android:background="@drawable/cornerslightblue"
+        android:id="@+id/join"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textStyle="italic"
+        android:layout_below="@id/connectionStatus"
+        android:text="Buddy"
+        android:background="@drawable/cornerslightblue"
+        android:id="@+id/buddy"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/connectionStatus"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textStyle="italic"
+        android:text="Quit"
+        android:background="@drawable/cornerslightblue"
+        android:id="@+id/quit"/>
+
+    <TableLayout
+        android:id="@+id/bottom_content"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+        <View android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:focusableInTouchMode="true" />
+        <TableRow>
+            <TableRow android:layout_weight="20"
+               >
+
+                <EditText
+
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:textSize="20sp"
+                    android:hint="Input your message"
+                    android:id="@+id/sendMessage"/>
+            </TableRow>
+            <TableRow android:layout_weight="1">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:textAllCaps="false"
+                    android:textStyle="italic"
+                    android:id="@+id/sendButton"
+                    android:text="send"
+                    android:textSize="28sp"/>
+            </TableRow>
+        </TableRow>
+    </TableLayout>
+
+
+    <ListView
+        android:id="@+id/chatList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#E1FFFF"
+        android:divider="#aaaaaa"
+        android:dividerHeight="0px"
+        android:layout_above="@+id/bottom_content"
+        android:layout_below="@id/join">
+
+    </ListView>
+
+</RelativeLayout>

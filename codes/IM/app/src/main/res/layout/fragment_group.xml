@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="10dp"
+    android:weightSum="1">
+    <TextView
+        android:id="@+id/groupTile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:text="Groups:"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        />
+    <LinearLayout
+        android:id="@+id/sendMessageLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cornersblue"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+        <EditText
+            android:windowSoftInputMode="stateHidden"
+            android:id="@+id/createdGroupName"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:hint="Group name"
+            android:layout_gravity="center_vertical"
+            android:textSize="25sp"
+            android:layout_marginRight="5dp"
+            android:background="#f8f8f8"/>
+
+        <Button
+
+            android:id="@+id/createButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/cornerslightorange"
+            android:text="Create"
+            android:layout_marginTop="5dp"
+            android:textStyle="italic"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+    <View android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:focusableInTouchMode="true" />
+    <ListView
+        android:layout_below="@id/groupTile"
+        android:id="@+id/groupList"
+        android:layout_above="@id/sendMessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cornerslightorange">
+
+    </ListView>
+
+</RelativeLayout>
